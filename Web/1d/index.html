@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Interactive cis-trans eQTL plot</title>
+    <script charset="utf-8" type="text/javascript" src="../d3/d3.min.js"></script>
+    <link rel="stylesheet" href="../jquery/jquery-ui.css">
+    <script type="text/javascript" src="../jquery/jquery.js"></script>
+    <script src="../jquery/jquery-ui.js"></script>
+    <script type="text/javascript" src="../d3-tip/d3.tip.old.js"></script>
+    <link rel=stylesheet type="text/css" href="../enar2014.css">
+    <script type="text/javascript" src="../nav/nav.js"></script>
+<style>
+text { font-size:14pt; }
+</style>
+</head>
+
+<body>
+<div id="navbar"></div>
+
+<p id="loading">[Loading...]</p>
+
+<div id="geneinput" style="opacity:0;">
+<form name="geneinput">
+<input id="genesymbol" type="text" value="Gene symbol" name="genesymbol"/>
+<input type="submit" id="submit" value="Submit" />
+<a id="currentgenesymbol"></a>
+</form>
+
+</div>
+
+<div id="cistrans"></div>
+
+<div id="legend" style="opacity:0;">
+An investigation of genetic loci (eQTL) influencing gene
+expression.
+
+<p>In the top-left panel, the x-axis corresponds to marker location
+and the y-axis corresponds to the genomic position of probes on a gene
+expression microarray. Each plotted point is an inferred eQTL.</p>
+
+<p>Hover over a point to see the probe ID and LOD score (a measure of
+association); also highlighted are any other eQTL for that probe.
+Click on the point to see the LOD curves below.</p>
+
+<p>If a clicked probe is in a known gene, the title in lower panel is a link
+to the Mouse Genome Informatics (MGI) site at the Jackson Lab.</p>
+
+<p>Hover over markers in the LOD curve plot to view marker names; click on
+a marker to see the phenotype-vs-genotype plot to the right.  In
+the geno-vs-pheno plot, hover over the average to view corresponding value, and hover over
+points to view individual IDs.</p>
+
+</div>
+
+
+<script type="text/javascript">
+navbar(3);
+</script>
+
+<script type="text/javascript" src="cistrans.js"></script>
+</body>
+</html>

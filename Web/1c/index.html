@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Correlation matrix with linked scatterplot</title>
+    <script type="text/javascript" src="../d3/d3.min.js"></script>
+    <script type="text/javascript" src="../d3-tip/d3-tip.min.js"></script>
+    <link rel=stylesheet type="text/css" href="../d3-tip/d3-tip.min.css">
+    <script type="text/javascript" src="../nav/nav.js"></script>
+    <link rel=stylesheet type="text/css" href="../enar2014.css">
+</head>
+
+<body>
+<div id="navbar"></div>
+
+<p id="loading">[Loading...]</p>
+
+<div id="chart"></div>
+
+<div id="legend" style="opacity:0;">
+Association in gene expression among 100 genes that are
+influenced by a common genetic locus. 
+
+<p> The left panel is a heat map of the correlation matrix, with blue
+= -1 and red = +1. Hover over pixels in the correlation matrix on the
+left to see the values; click to see the corresponding scatterplot on
+the right.</p>
+
+<p> Points in the scatterplot are colored by genotype at the
+underlying QTL.</p>
+</div>
+
+<script type="text/javascript">
+navbar(2);
+</script>
+<script type="text/javascript" src="corr_w_scatter.js"></script>
+</body>
+</html>

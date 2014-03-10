@@ -1,0 +1,39 @@
+
+1. Gough mouse example:
+
+ 1a. Phenotypes over time:
+     - heat map of the curves
+     - all the curves
+     - scatterplots of week 1 vs 5 vs 15
+       OR: week 1 vs change (wk 5 - wk 1) vs change (wk 15 - wk 5)
+
+     brush scatterplots to highlight curves
+     or highlight curves via heatmap?
+
+  1b. Genome scans for each time point
+      - image of LOD curves
+      - linked to genome scan for that time point
+      - linked to detail on a given chromosome?
+      - also, to plot of average curves for each genotype
+        (as well as additive and dominance effects?)
+
+
+2. Attie eQTL project:
+
+   2a. many box plots
+   2b. heat map of expression linked to scatterplot
+   2c. LOD curve for insulin linked to QTL effect
+   2d. eQTL plot
+
+
+--- 
+
+Attie figures are ready
+
+Gough figures need:
+  - panel for plotting multiple curves
+  - heat map of LOD curves
+
+  - multiple curves linked to 2 scatterplots
+  - heat map of LOD curves linked to individual LOD curve and
+    estimated effects

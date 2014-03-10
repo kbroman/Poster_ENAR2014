@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+<script charset="utf-8" type="text/javascript" src="../d3/d3.min.js"></script>
+<script type="text/javascript" src="../nav/nav.js"></script>
+<link rel=stylesheet type="text/css" href="../enar2014.css">
+
+<title>Single-QTL scans for phenotype over time</title>
+<style> text { font-size:12pt; } </style>
+</head>
+
+<body>
+<div id="navbar"></div>
+
+
+<div id="lod_by_time_fig" style="margin-top:50px;"></div>
+
+<p id="loading">[Loading...]</p>
+
+
+
+<div id="legend" style="opacity:0;">
+The top-left panel is a heat map of a measure association (LOD score) between genotype
+at a fixed position and the phenotype at a fixed time. 
+Red indicates 
+that BB lines have larger phenotype values, and blue indicates that AA lines
+have larger phenotype values.  We consider only those (position, time)
+pairs with LOD > 1.</p>
+
+<p>When you hover over a point in the top-left plot, the LOD curves for the
+corresponding time are shown below, and the phenotype averages and
+estimated QTL effect (across time) for the corresponding genomic
+position are shown to the right.</p>
+
+<p>Click on a point to show pointwise confidence bands on the QTL
+effect (&plusmn; 2 SE).  (We require a mouse click, as otherwise the graph
+was painfully slow to refresh.)</p>
+
+</div>
+
+<script type="text/javascript">
+navbar(5);
+</script>
+
+<script type="text/javascript" src="lod_by_time.js"></script>
+</body>
+</html>

@@ -1,0 +1,177 @@
+
+body {
+	font-family: sans-serif;
+	margin-top: 20px;
+	margin-bottom: 0;
+	margin-left: 20px;
+	margin-right: 20px;
+	padding: 0;
+}
+
+
+body {
+	color: black;
+	background: white;
+	}
+
+h1, h2, h3, h4, h5, h6, dt, th, hr {
+	color: indigo;
+	background: white;
+	}
+
+a { text-decoration: none; color: #23238e; }
+a:hover { background: #B9EEEE; }
+
+:link:focus, :visited:focus { background: #DDD; }
+:link, :visited { background: white; }
+:link:active, :visited:active { background: white; }
+:link:hover, :visited:hover { background: #DDD; }
+:link { color: #00c; }
+:visited { color: #606; }
+:link:active, :visited:active { color: red; }
+
+:link img { border-color: blue; }
+:visited img { border-color: purple; }
+:link:active img, :visited:active img { border-color: red; }
+
+div#navbar {
+  margin-left: 0px;
+}
+
+p#loading {
+  font-size: 20pt;
+}
+
+text {
+  font-family: sans-serif;
+  font-size: 16pt;
+}
+
+.title text {
+  dominant-baseline: middle;
+  fill: blue;
+  text-anchor: middle;
+}
+
+.y.axis text {
+  dominant-baseline: middle;
+}
+
+.y.axis text.title {
+  text-anchor: middle;
+  fill: slateblue;
+}
+
+.x.axis text {
+  dominant-baseline: hanging;
+  text-anchor: middle;
+}
+
+.x.axis text.title {
+  fill: slateblue;
+}
+
+
+
+
+
+line.axis.grid {
+  fill: none;
+  stroke-width: 1;
+  pointer-events: none;
+}
+
+line.x.axis.grid {
+  stroke: rgb(200, 200, 200);
+  stroke-width: 3;
+}
+
+line.y.axis.grid {
+  stroke: white;
+}
+
+.extent {
+  fill: #cac;
+  opacity: 0.3;
+}
+
+circle.selected {
+  fill: hotpink;
+  opacity: 1;
+}
+
+div#legend {
+  width:400px;
+  top: 250px;
+  left: 1200px;
+  background: #eedbf4;
+  position: absolute;
+  padding:5px;
+  font-size: 20px;
+}
+
+
+
+.line {
+  stroke-width: 1;
+  fill: none;
+}
+
+.d3-tip {
+  background: darkslateblue;
+  color: #fff;
+  stroke: none;
+  font-weight: bold;
+  font-size: 16px;
+  font-family: sans-serif;
+  padding: 3px;
+}
+
+
+
+.thickline {
+  stroke-width: 2;
+  fill: none;
+}
+
+
+text.alignright {
+ text-anchor: end;
+}
+
+
+.outerBox {
+  stroke: black;
+  stroke-width: 2;
+  fill: none;
+  pointer-events: none;
+}
+
+.innerBox {
+  fill: rgb(230, 230, 230);
+  stroke: none;
+  pointer-events: none;
+}
+
+.axis {
+  pointer-events: none;
+}
+
+.d3-tip {
+  fill: darkslateblue;
+  stroke: none;
+  font-weight: bold;
+}
+
+
+.d3-tip text {
+  fill: white;
+  font-size: 16px;
+  stroke: none;
+  font-family: sans-serif;
+}
+
+/* default form input made gray */
+.inactive {
+  color: #888;
+}

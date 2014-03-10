@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>LOD curves and QTL effects</title>
+    <script charset="utf-8" type="text/javascript" src="../d3/d3.min.js"></script>
+    <script type="text/javascript" src="../d3-tip/d3.tip.old.js"></script>
+    <script type="text/javascript" src="../nav/nav.js"></script>
+    <link rel=stylesheet type="text/css" href="../enar2014.css">
+<style>
+text { font-size: 12pt; }
+</style>
+</head>
+
+<body>
+<div id="navbar"></div>
+
+<p id="loading">[Loading...]</p>
+
+<div id="figure"></div>
+
+
+<div id="legend" style="opacity:0;">
+A genome scan for genetic loci (called quantitative trait loci, QTL)
+influencing insulin level. The LOD score is a log<sub>10</sub> likelihood
+ratio measuring the strength of association between genotype and
+phenotype.
+
+<p>Click on a chromosome at the top and a detailed view of the LOD
+curve for that chromosome is shown on the bottom left.</p>
+
+<p>In the lower-left panel, hover over markers to see names; click to
+view an effect plot and and phenotype-vs-genotype plot to the right.</p>
+
+<p>In the effect plot, hover over means to see values.</p>
+
+<p>In the phenotype-vs-genotype plot, hover over points to see individual IDs.</p>
+</div>
+
+
+<script type="text/javascript">
+navbar(1);
+</script>
+
+<script type="text/javascript" src="lod_and_effect.js"></script>
+</body>
+</html>
