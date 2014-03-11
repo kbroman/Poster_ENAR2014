@@ -45,8 +45,8 @@
 \newcommand{\ttsm}{\tt \small}
 \newcommand{\ttfn}{\tt \footnotesize}
 \newcommand{\bluebold}{\color{dblue} \bf}
-\newcommand{\colonevsep}{\vspace{20mm}}
-\newcommand{\coltwovsep}{\vspace{40mm}}
+\newcommand{\colonevsep}{\vspace{18.5mm}}
+\newcommand{\coltwovsep}{\vspace{35.5mm}}
 \newcommand{\colthreevsep}{\vspace{12mm}}
 \newcommand{\colfourvsep}{\vspace{10mm}}
 \newcommand{\colfivevsep}{\vspace{23mm}}
@@ -105,8 +105,8 @@
           \vspace{8pt}
            \bi \itemsep14pt
            \item Data visualization is often more important than
-             formal inference
-           \item All graphs could be improved with some interactivity
+             formal inference.
+           \item All graphs could be improved with some interactivity.
            \ei
         \ei
 
@@ -125,7 +125,7 @@
 
       \bi
       \itemsep18pt
-      \item \bluebold Exploration
+      \item {\bluebold Exploration}
           \vspace{8pt}
          \bi \itemsep14pt
          \item Tuning parameters
@@ -133,7 +133,7 @@
          \item One fancy plot vs 1000 static plots
          \ei
 
-      \item \bluebold Reports for collaborators
+      \item {\bluebold Reports for collaborators}
           \vspace{8pt}
          \bi \itemsep14pt
          \item Living documents!
@@ -141,7 +141,7 @@
          \item Cut down on simple questions?
          \ei
 
-      \item \bluebold Big Data
+      \item {\bluebold Big Data}
           \vspace{8pt}
          \bi \itemsep14pt
          \item Don't just rely on summary statistics
@@ -150,7 +150,7 @@
          \item More exploration, more connections
          \ei
 
-      \item \bluebold Teaching
+      \item {\bluebold Teaching}
           \vspace{8pt}
          \bi \itemsep14pt
          \item Cool things to look at and play with
@@ -229,7 +229,7 @@
       \item {\bluebold googleVis}
         {\small (\href{https://code.google.com/p/google-motion-charts-with-r/}{\ttsm code.google.com/p/google-motion-charts-with-r})}
       \item {\bluebold Shiny}
-        {\small (\href{http://www.rstudio.com/shiny}{\ttsm www.rstudio.com/shiny})}
+        {\small (\href{http://www.rstudio.com/shiny}{\ttsm rstudio.com/shiny})}
       \item {\bluebold ggvis}
         {\small (\href{http://ggvis.rstudio.com}{\ttsm ggvis.rstudio.com})}
       \item {\bluebold Rcharts}
@@ -262,7 +262,7 @@
     \begin{exampleblock}{\Large Summary}
         \bi \itemsep18pt
         \item For high-dimensional data, good visualizations are
-          {\hilit critical}
+          {\hilit critical}.
         \item {\hilit Interactive} graphics require effort, but they
           \bi
           \item Facilitate exploration
@@ -270,14 +270,18 @@
           \item Enable summaries with access to the details
           \ei
         \item Visualizations must be {\hilit tailored} to
-          the data and questions
+          the data and questions.
         \item {\hilit D3} is rather low level, but it
           \bi
           \item Is totally flexible (like R's static graphics)
           \item Provides hours of enjoyment
           \item Can provide other hours of frustration
           \ei
-        \item \href{http://github.com/kbroman/qtlcharts}{R/qtlcharts} package under development
+        \item \href{http://github.com/kbroman/qtlcharts}{R/qtlcharts}
+          package under development
+          \bi
+          \item[] {\small (\href{http://github.com/kbroman/qtlcharts}{\ttsm github.com/kbroman/qtlcharts})}
+          \ei
         \ei
     \end{exampleblock}
 
@@ -522,7 +526,7 @@
       \vspace{10mm} % after legend
 
         \begin{beamercolorbox}[sep=1em, wd=\onecolwid]{legend} \rmfamily
-        The top-left panel is a heat map of a measure association (LOD
+        The top-left panel is a heat map of a measure of association (LOD
         score) between genotype at a fixed position and the phenotype
         at a fixed time.  Red (blue) indicates that BB (AA) lines have larger
         phenotype.
