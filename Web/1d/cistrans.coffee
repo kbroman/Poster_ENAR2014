@@ -282,6 +282,17 @@ draw = (data) ->
      .attr("fill", titlecolor)
      .style("dominant-baseline", "middle")
 
+  xloc = left[2] - pad.left*1.05
+  yloc = (top[0] + bottom[0])/2
+  axislabels.append("text")
+     .text("Gene expression level")
+     .attr("x", xloc)
+     .attr("y", yloc)
+     .attr("transform", "rotate(270,#{xloc},#{yloc})")
+     .style("text-anchor", "middle")
+     .attr("fill", titlecolor)
+     .style("dominant-baseline", "middle")
+
   # overall maximum lod score
   maxlod = d3.max(data.peaks, (d) -> d.lod)
 
