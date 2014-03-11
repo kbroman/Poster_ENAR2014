@@ -45,14 +45,18 @@
 \newcommand{\ttsm}{\tt \small}
 \newcommand{\ttfn}{\tt \footnotesize}
 \newcommand{\bluebold}{\color{dblue} \bf}
-\newcommand{\colonevsep}{\vspace{40mm}}
-\newcommand{\coltwovsep}{\vspace{23mm}}
+\newcommand{\colonevsep}{\vspace{20mm}}
+\newcommand{\coltwovsep}{\vspace{40mm}}
 \newcommand{\colthreevsep}{\vspace{12mm}}
 \newcommand{\colfourvsep}{\vspace{10mm}}
 \newcommand{\colfivevsep}{\vspace{23mm}}
+\newcommand{\hilit}{\color{mypurple}}
 
 % color for figure legend boxes
 \setbeamercolor{legend}{fg=black,bg=mypurple!10}
+
+% nested itemize with en-dash
+\setbeamertemplate{itemize subitem}{--}
 
 
 %-----------------------------------------------------------
@@ -72,8 +76,7 @@
 
 \title{Data visualizations should be more interactive}
 \author{Karl W Broman}
-
-\institute{\normalsize Biostatistics \&
+\institute{Biostatistics \&
   Medical Informatics, University of Wisconsin--Madison}
 
 %-----------------------------------------------------------
@@ -92,29 +95,27 @@
 
   \begin{column}{\onecolwid}
 
-    \begin{exampleblock}{\Large Abstract}
-       {The value of interactive graphics for making sense of
-        high-dimensional data has long been appreciated but is still not
-        in routine use. Interactive graphics facilitate data exploration,
-        are great collaborative tools, allow compressed summary plots to
-        be linked to the underlying details, and can be fabulous teaching
-        tools. New web-browser-based tools, such as the JavaScript library
-        D3, have greatly simplified the development of interactive
-        visualizations. A number of R packages, including Shiny and
-        rCharts, provide customizable interactive visualizations directly
-        from R.  I provide a number of examples to illustrate the
-        value of interactive graphics, with live demonstrations on a
-        laptop. (I'd initially planned to use
-        handheld devices, but the resolution is too poor for what I am
-        trying to do.)
+    \begin{exampleblock}{\Large Introduction}{
+        \bi \itemsep18pt
+        \item I've found high-dimensional data {\hilit befuddling}.
+        \item With 3000 gene expression arrays, you'd think we'd make
+          {\hilit a lot} of graphs, but we tend to make {\hilit no} graphs.
+        \item {\hilit Interactive graphics} provide a solution to this problem.
+        \item I've come to the conclusions that
+          \vspace{8pt}
+           \bi \itemsep14pt
+           \item Data visualization is often more important than
+             formal inference
+           \item All graphs could be improved with some interactivity
+           \ei
+        \ei
 
      \vspace{18pt}
 
-        \centerline{Live demos:
+        \centerline{Demos:
         \href{http://www.biostat.wisc.edu/~kbroman/posters/ENAR2014}{\tt \textbf{bit.ly/enar2014}}}
 
      }
-
     \end{exampleblock}
 
 
@@ -125,7 +126,7 @@
       \bi
       \itemsep18pt
       \item \bluebold Exploration
-
+          \vspace{8pt}
          \bi \itemsep14pt
          \item Tuning parameters
          \item Identifying outliers
@@ -133,7 +134,7 @@
          \ei
 
       \item \bluebold Reports for collaborators
-
+          \vspace{8pt}
          \bi \itemsep14pt
          \item Living documents!
          \item Allow deeper exploration of the results
@@ -141,7 +142,7 @@
          \ei
 
       \item \bluebold Big Data
-
+          \vspace{8pt}
          \bi \itemsep14pt
          \item Don't just rely on summary statistics
          \item Greatly compressed information, but with access to the details
@@ -150,7 +151,7 @@
          \ei
 
       \item \bluebold Teaching
-
+          \vspace{8pt}
          \bi \itemsep14pt
          \item Cool things to look at and play with
          \item Animated illustrations of key concepts
@@ -185,8 +186,7 @@
 
   \colonevsep % between blocks
 
-
-    \begin{block}{But: {\color{mypurple} many} exciting new tools }{
+    \begin{block}{But: {\hilit many} exciting new tools }{
       \bi
       \itemsep18pt
       \item HTML5 + Scalable vector graphics (SVG)
@@ -197,13 +197,25 @@
     }
     \end{block}
 
+  \colonevsep % between blocks
+
+    \begin{block}{D3}{
+
+       \bi \itemsep18pt
+       \item Javascript library for manipulating HTML and SVG elements
+       \item Connects data to elements
+       \item Low level, but flexible
+       \ei
+    }
+    \end{block}
+
   \end{column}
 
   \begin{column}{\sepwid} \end{column} % empty spacer column
 
   \begin{column}{\onecolwid}
 
-    \begin{block}{Options}{
+    \begin{block}{Other options}{
 
       \bi \itemsep18pt
       \item {\tt \bluebold locator()} and {\tt \bluebold identify()}
@@ -212,27 +224,16 @@
         {\small (\href{https://github.com/ggobi/cranvas/wiki}{\ttsm github.com/ggobi/cranvas/wiki})}
       \item {\bluebold Mondrian}
         {\small (\href{http://rosuda.org/software/Mondrian/}{\ttsm rosuda.org/software/Mondrian})}
-      \item {\bluebold gWidgets}
-        {\small (\href{http://gwidgets.r-forge.r-project.org/}{\ttsm gwidgets.r-forge.r-project.org})}
-      \item {\bluebold rpanel}
-        {\small (\href{http://www.stats.gla.ac.uk/~adrian/rpanel/}{\ttsm www.stats.gla.ac.uk/{\textasciitilde}adrian/rpanel})}
       \item {\bluebold Acinoynx} (aka iPlots eXtreme)
         {\small (\href{http://rforge.net/Acinonyx/}{\ttsm rforge.net/Acinonyx})}
       \item {\bluebold googleVis}
         {\small (\href{https://code.google.com/p/google-motion-charts-with-r/}{\ttsm code.google.com/p/google-motion-charts-with-r})}
-      \item {\bluebold gridSVG}
-        {\small (\href{http://r-forge.r-project.org/projects/gridsvg/}{\ttsm r-forge.r-project.org/projects/gridsvg})}
-      \item {\bluebold RGL}
-        {\small (\href{http://rgl.neoscientists.org/}{\ttsm rgl.neoscientists.org})}
-      \item \href{http://www.rstudio.com}{RStudio}'s {\tt \bluebold manipulate()} 
-        {\small (\href{http://www.rstudio.com/ide/docs/advanced/manipulate}{\ttsm www.rstudio.com/ide/docs/advanced/manipulate})}
-      \item \href{http://www.rstudio.com}{RStudio}'s {\bluebold Shiny}
+      \item {\bluebold Shiny}
         {\small (\href{http://www.rstudio.com/shiny}{\ttsm www.rstudio.com/shiny})}
-      \item \href{http://www.rstudio.com}{RStudio}'s {\bluebold ggvis}
+      \item {\bluebold ggvis}
         {\small (\href{http://ggvis.rstudio.com}{\ttsm ggvis.rstudio.com})}
       \item {\bluebold Rcharts}
         {\small (\href{http://rcharts.io}{\ttsm rcharts.io})}
-      \item {\bluebold D3} {\small (\href{http://d3js.org}{\ttsm d3js.org})}
       \ei
 
     }
@@ -258,40 +259,55 @@
 
   \coltwovsep % between blocks
 
-    \begin{block}{D3}{
-
-       \bi \itemsep18pt
-       \item Javascript library for manipulating HTML and SVG elements
-       \item Connects data to elements
-       \item Low level, but flexible
-       \item Used at the \href{http://www.nytimes.com/pages/multimedia/index.html}{NY Times}
-       \item I use \href{http://coffeescript.org}{CoffeeScript} rather than JavaScript
-       \ei
-    }
-    \end{block}
-
-  \coltwovsep % between blocks
-
     \begin{exampleblock}{\Large Summary}
         \bi \itemsep18pt
         \item For high-dimensional data, good visualizations are
-          {\color{mypurple} critical}
-        \item {\color{mypurple} Interactive} graphics require effort, but they
+          {\hilit critical}
+        \item {\hilit Interactive} graphics require effort, but they
           \bi
           \item Facilitate exploration
           \item Are great collaborative tools
           \item Enable summaries with access to the details
           \ei
-        \item Visualizations must be {\color{mypurple} tailored} to
+        \item Visualizations must be {\hilit tailored} to
           the data and questions
-        \item {\color{mypurple} D3} is rather low level, but it
+        \item {\hilit D3} is rather low level, but it
           \bi
           \item Is totally flexible (like R's static graphics)
           \item Provides hours of enjoyment
           \item Can provide other hours of frustration
           \ei
+        \item \href{http://github.com/kbroman/qtlcharts}{R/qtlcharts} package under development
         \ei
     \end{exampleblock}
+
+  \coltwovsep % between blocks
+
+    \begin{block}{Acknowledgments}
+
+      {\bluebold Example 1}
+
+          \vspace{12pt}
+          \hfill \begin{minipage}{0.165\paperwidth} Alan Attie$^1$,
+            Mark Keller$^1$, Aimee Teo Broman$^2$, Christina
+            Kendziorski$^2$, Brian Yandell$^3$, Eric Schadt$^4$;
+            Departments of $^1$Biochemistry, $^2$Biostatistics \&
+            Medical Informatics, and $^3$Statistics, UW-Madison;
+            $^4$Mount Sinai
+          \end{minipage}
+
+          \vspace{24pt}
+
+      {\bluebold Example 2}
+
+          \vspace{12pt}
+          \hfill \begin{minipage}{0.165\paperwidth} 
+            Candace Moore$^1$, Edgar Spalding$^1$, Logan Johnson$^1$, Il-Youp Kwak$^2$,
+            Miron Livny$^3$; Departments of $^1$Botany,
+            $^2$Statistics, and $^3$Computer Sciences, UW-Madison
+          \end{minipage}
+
+    \end{block}
 
   \coltwovsep % between blocks
 
