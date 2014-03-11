@@ -1,8 +1,11 @@
-all: js json
+all: js json resources.html
 
 js: 1a/manyboxplots.js 1b/lod_and_effect.js 1c/corr_w_scatter.js 1d/cistrans.js 2a/phe_vs_time.js 2b/lod_by_time.js nav/nav.js
 
 json: 2a/phe_vs_time.json
+
+resources.html: resources.md
+	R -e 'library(markdown);markdownToHTML("resources.md", "resources.html")'
 
 1a/manyboxplots.js: 1a/manyboxplots.coffee
 	coffee -c 1a/manyboxplots.coffee

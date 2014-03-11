@@ -19,15 +19,15 @@ h1, h2, h3, h4, h5, h6, dt, th, hr {
 	background: white;
 	}
 
-a { text-decoration: none; color: #23238e; }
+a { text-decoration: none; color: #6363ce; }
 a:hover { background: #B9EEEE; }
 
 :link:focus, :visited:focus { background: #DDD; }
 :link, :visited { background: white; }
 :link:active, :visited:active { background: white; }
-:link:hover, :visited:hover { background: #DDD; }
-:link { color: #00c; }
-:visited { color: #606; }
+:link:hover, :visited:hover { background: #B9EEEE; }
+:link { color: #6363ce; }
+:visited { color: #6363ce; }
 :link:active, :visited:active { color: red; }
 
 :link img { border-color: blue; }
