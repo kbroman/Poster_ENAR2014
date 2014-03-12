@@ -52,7 +52,7 @@ corr_w_scatter = (data) ->
   scatterplot.append("rect")
              .attr("height", h)
              .attr("width", w)
-             .attr("fill", d3.rgb(200, 200, 200))
+             .attr("fill", d3.rgb(230, 230, 230))
              .attr("stroke", "black")
              .attr("stroke-width", 1)
              .attr("pointer-events", "none")

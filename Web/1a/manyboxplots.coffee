@@ -65,7 +65,7 @@ draw = (data) ->
      .attr("height", h-pad.top-pad.bottom)
      .attr("width", w-pad.left-pad.right)
      .attr("stroke", "none")
-     .attr("fill", d3.rgb(200, 200, 200))
+     .attr("fill", d3.rgb(230, 230, 230))
 
   # axis on left
   LaxisData = [-1, -0.75, -0.5, -0.25, 0, 0.25, 0.5, 0.75, 1]
@@ -236,7 +236,7 @@ draw = (data) ->
      .attr("height", h-pad.top-pad.bottom)
      .attr("width", w-pad.left-pad.right)
      .attr("stroke", "none")
-     .attr("fill", d3.rgb(200, 200, 200))
+     .attr("fill", d3.rgb(230, 230, 230))
 
   # axis on left
   lowBaxisData = [-1, -0.5, 0, 0.5, 1, 1.5, 2]
@@ -255,7 +255,7 @@ draw = (data) ->
      .attr("x2", (d) -> lowxScale(d))
      .attr("stroke", (d) ->
            return "white" if d != 0
-           "rgb(255,220,255)")
+           "hotpink")
 
   # axis: labels
   lowBaxis.append("g").selectAll("empty")
